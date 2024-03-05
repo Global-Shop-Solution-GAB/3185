@@ -1,0 +1,518 @@
+Program.Sub.ScreenSU.Start
+
+Gui.F_Mode..Create
+Gui.F_Mode..Caption("Select Mode")
+Gui.F_Mode..Size(2985,1125)
+Gui.F_Mode..Position(0,0)
+Gui.F_Mode..AlwaysOnTop(False)
+Gui.F_Mode..FontName("Arial")
+Gui.F_Mode..FontSize(8)
+Gui.F_Mode..ForeColor(0)
+Gui.F_Mode..Backcolor(-2147483633)
+Gui.F_Mode..ControlBox(True)
+Gui.F_Mode..MaxButton(False)
+Gui.F_Mode..MinButton(True)
+Gui.F_Mode..MousePointer(0)
+Gui.F_Mode..Moveable(True)
+Gui.F_Mode..Sizeable(False)
+Gui.F_Mode..ShowInTaskBar(True)
+Gui.F_Mode..TitleBar(True)
+
+Gui.F_Mode..Event(unload,f_mode_unload)
+
+Gui.F_Mode.drpMode.Create(dropdownlist)
+Gui.F_Mode.drpMode.Visible(True)
+Gui.F_Mode.drpMode.Size(2500,330)
+Gui.F_Mode.drpMode.Zorder(0)
+Gui.F_Mode.drpMode.Position(200,200)
+Gui.F_Mode.drpMode.Enabled(True)
+Gui.F_Mode.drpMode.FontName("Arial")
+Gui.F_Mode.drpMode.FontSize(8)
+Gui.F_Mode.drpMode.TabStop(True)
+Gui.F_Mode.drpMode.TabIndex(0)
+Gui.F_Mode.drpMode.Tooltip("")
+Gui.F_Mode.drpMode.ControlGroup(0)
+Gui.F_Mode.drpMode.DefaultValue("")
+
+Gui.F_Mode.drpMode.Event(click,drpmode_click)
+
+Gui.F_Template..Create
+Gui.F_Template..Caption("Template Maintenance")
+Gui.F_Template..Size(2580,3300)
+Gui.F_Template..Position(0,0)
+Gui.F_Template..AlwaysOnTop(False)
+Gui.F_Template..FontName("Arial")
+Gui.F_Template..FontSize(8)
+Gui.F_Template..ForeColor(0)
+Gui.F_Template..Backcolor(-2147483633)
+Gui.F_Template..ControlBox(True)
+Gui.F_Template..MaxButton(False)
+Gui.F_Template..MinButton(True)
+Gui.F_Template..MousePointer(0)
+Gui.F_Template..Moveable(True)
+Gui.F_Template..Sizeable(False)
+Gui.F_Template..ShowInTaskBar(True)
+Gui.F_Template..TitleBar(True)
+
+Gui.F_Template..Event(unload,f_template_unload)
+
+Gui.F_Template.lbl1.Create(label)
+Gui.F_Template.lbl1.Caption("Text to display in list")
+Gui.F_Template.lbl1.Visible(True)
+Gui.F_Template.lbl1.Size(1935,255)
+Gui.F_Template.lbl1.Zorder(1)
+Gui.F_Template.lbl1.Position(200,200)
+Gui.F_Template.lbl1.Enabled(True)
+Gui.F_Template.lbl1.Alignment(0)
+Gui.F_Template.lbl1.FontName("Arial")
+Gui.F_Template.lbl1.FontSize(8)
+Gui.F_Template.lbl1.Backcolor(-2147483633)
+Gui.F_Template.lbl1.BackStyle(0)
+Gui.F_Template.lbl1.Tooltip("")
+Gui.F_Template.lbl1.ControlGroup(0)
+
+
+Gui.F_Template.txtDisplay.Create(textbox)
+Gui.F_Template.txtDisplay.Text("")
+Gui.F_Template.txtDisplay.Visible(False)
+Gui.F_Template.txtDisplay.Size(2000,300)
+Gui.F_Template.txtDisplay.Zorder(0)
+Gui.F_Template.txtDisplay.Position(200,400)
+Gui.F_Template.txtDisplay.Enabled(False)
+Gui.F_Template.txtDisplay.Alignment(0)
+Gui.F_Template.txtDisplay.FontName("Arial")
+Gui.F_Template.txtDisplay.FontSize(8)
+Gui.F_Template.txtDisplay.Backcolor(-2147483643)
+Gui.F_Template.txtDisplay.BorderStyle(1)
+Gui.F_Template.txtDisplay.MaxLength(20)
+Gui.F_Template.txtDisplay.TabStop(True)
+Gui.F_Template.txtDisplay.TabIndex(1)
+Gui.F_Template.txtDisplay.Tooltip("")
+Gui.F_Template.txtDisplay.ControlGroup(0)
+Gui.F_Template.txtDisplay.DefaultValue("")
+
+
+Gui.F_Template.lbl2.Create(label)
+Gui.F_Template.lbl2.Caption("File name of template")
+Gui.F_Template.lbl2.Visible(True)
+Gui.F_Template.lbl2.Size(1935,255)
+Gui.F_Template.lbl2.Zorder(1)
+Gui.F_Template.lbl2.Position(200,800)
+Gui.F_Template.lbl2.Enabled(True)
+Gui.F_Template.lbl2.Alignment(0)
+Gui.F_Template.lbl2.FontName("Arial")
+Gui.F_Template.lbl2.FontSize(8)
+Gui.F_Template.lbl2.Backcolor(-2147483633)
+Gui.F_Template.lbl2.BackStyle(0)
+Gui.F_Template.lbl2.Tooltip("")
+Gui.F_Template.lbl2.ControlGroup(0)
+
+
+Gui.F_Template.txtFileName.Create(textbox)
+Gui.F_Template.txtFileName.Text("")
+Gui.F_Template.txtFileName.Visible(True)
+Gui.F_Template.txtFileName.Size(2000,300)
+Gui.F_Template.txtFileName.Zorder(0)
+Gui.F_Template.txtFileName.Position(200,1000)
+Gui.F_Template.txtFileName.Enabled(True)
+Gui.F_Template.txtFileName.Alignment(0)
+Gui.F_Template.txtFileName.FontName("Arial")
+Gui.F_Template.txtFileName.FontSize(8)
+Gui.F_Template.txtFileName.Backcolor(-2147483643)
+Gui.F_Template.txtFileName.BorderStyle(1)
+Gui.F_Template.txtFileName.MaxLength(25)
+Gui.F_Template.txtFileName.TabStop(True)
+Gui.F_Template.txtFileName.TabIndex(3)
+Gui.F_Template.txtFileName.Tooltip("")
+Gui.F_Template.txtFileName.ControlGroup(0)
+Gui.F_Template.txtFileName.DefaultValue("")
+
+
+Gui.F_Template.chkDescr1.Create(checkbox)
+Gui.F_Template.chkDescr1.Alignment(0)
+Gui.F_Template.chkDescr1.Caption("Description 1")
+Gui.F_Template.chkDescr1.Visible(True)
+Gui.F_Template.chkDescr1.Size(1935,285)
+Gui.F_Template.chkDescr1.Zorder(0)
+Gui.F_Template.chkDescr1.Position(200,1400)
+Gui.F_Template.chkDescr1.Enabled(True)
+Gui.F_Template.chkDescr1.FontName("Arial")
+Gui.F_Template.chkDescr1.FontSize(8)
+Gui.F_Template.chkDescr1.TabStop(True)
+Gui.F_Template.chkDescr1.TabIndex(4)
+Gui.F_Template.chkDescr1.Tooltip("")
+Gui.F_Template.chkDescr1.ControlGroup(0)
+Gui.F_Template.chkDescr1.DefaultValue("")
+
+
+Gui.F_Template.chkDescr2.Create(checkbox)
+Gui.F_Template.chkDescr2.Alignment(0)
+Gui.F_Template.chkDescr2.Caption("Description 2")
+Gui.F_Template.chkDescr2.Visible(True)
+Gui.F_Template.chkDescr2.Size(1935,255)
+Gui.F_Template.chkDescr2.Zorder(0)
+Gui.F_Template.chkDescr2.Position(200,1700)
+Gui.F_Template.chkDescr2.Enabled(True)
+Gui.F_Template.chkDescr2.FontName("Arial")
+Gui.F_Template.chkDescr2.FontSize(8)
+Gui.F_Template.chkDescr2.TabStop(True)
+Gui.F_Template.chkDescr2.TabIndex(5)
+Gui.F_Template.chkDescr2.Tooltip("")
+Gui.F_Template.chkDescr2.ControlGroup(0)
+Gui.F_Template.chkDescr2.DefaultValue("")
+
+
+Gui.F_Template.chkDescr3.Create(checkbox)
+Gui.F_Template.chkDescr3.Alignment(0)
+Gui.F_Template.chkDescr3.Caption("Description 3")
+Gui.F_Template.chkDescr3.Visible(True)
+Gui.F_Template.chkDescr3.Size(1935,255)
+Gui.F_Template.chkDescr3.Zorder(0)
+Gui.F_Template.chkDescr3.Position(200,2000)
+Gui.F_Template.chkDescr3.Enabled(True)
+Gui.F_Template.chkDescr3.FontName("Arial")
+Gui.F_Template.chkDescr3.FontSize(8)
+Gui.F_Template.chkDescr3.TabStop(True)
+Gui.F_Template.chkDescr3.TabIndex(6)
+Gui.F_Template.chkDescr3.Tooltip("")
+Gui.F_Template.chkDescr3.ControlGroup(0)
+Gui.F_Template.chkDescr3.DefaultValue("")
+
+
+Gui.F_Template.cmdSave.Create(button)
+Gui.F_Template.cmdSave.Caption("Save")
+Gui.F_Template.cmdSave.Visible(False)
+Gui.F_Template.cmdSave.Size(855,375)
+Gui.F_Template.cmdSave.Zorder(0)
+Gui.F_Template.cmdSave.Position(230,2315)
+Gui.F_Template.cmdSave.Enabled(False)
+Gui.F_Template.cmdSave.FontName("Arial")
+Gui.F_Template.cmdSave.FontSize(8)
+Gui.F_Template.cmdSave.TabStop(True)
+Gui.F_Template.cmdSave.TabIndex(7)
+Gui.F_Template.cmdSave.Tooltip("")
+Gui.F_Template.cmdSave.ControlGroup(0)
+Gui.F_Template.cmdSave.DefaultValue("")
+
+Gui.F_Template.cmdSave.Event(click,cmdsave_click)
+
+Gui.F_Template.cmdCancel.Create(button)
+Gui.F_Template.cmdCancel.Caption("Cancel")
+Gui.F_Template.cmdCancel.Visible(True)
+Gui.F_Template.cmdCancel.Size(855,375)
+Gui.F_Template.cmdCancel.Zorder(0)
+Gui.F_Template.cmdCancel.Position(1300,2300)
+Gui.F_Template.cmdCancel.Enabled(True)
+Gui.F_Template.cmdCancel.FontName("Arial")
+Gui.F_Template.cmdCancel.FontSize(8)
+Gui.F_Template.cmdCancel.TabStop(True)
+Gui.F_Template.cmdCancel.TabIndex(8)
+Gui.F_Template.cmdCancel.Tooltip("")
+Gui.F_Template.cmdCancel.ControlGroup(0)
+Gui.F_Template.cmdCancel.DefaultValue("")
+
+Gui.F_Template.cmdCancel.Event(click,f_template_unload)
+
+Gui.F_Template.cmdDelete.Create(button)
+Gui.F_Template.cmdDelete.Caption("Delete")
+Gui.F_Template.cmdDelete.Visible(False)
+Gui.F_Template.cmdDelete.Size(855,375)
+Gui.F_Template.cmdDelete.Zorder(0)
+Gui.F_Template.cmdDelete.Position(200,2300)
+Gui.F_Template.cmdDelete.Enabled(False)
+Gui.F_Template.cmdDelete.FontName("Arial")
+Gui.F_Template.cmdDelete.FontSize(8)
+Gui.F_Template.cmdDelete.TabStop(True)
+Gui.F_Template.cmdDelete.TabIndex(9)
+Gui.F_Template.cmdDelete.Tooltip("")
+Gui.F_Template.cmdDelete.ControlGroup(0)
+Gui.F_Template.cmdDelete.DefaultValue("")
+
+Gui.F_Template.cmdDelete.Event(click,cmddelete_click)
+
+Gui.F_Template.drpDisplay.Create(dropdownlist)
+Gui.F_Template.drpDisplay.Visible(False)
+Gui.F_Template.drpDisplay.Size(2000,330)
+Gui.F_Template.drpDisplay.Zorder(0)
+Gui.F_Template.drpDisplay.Position(200,400)
+Gui.F_Template.drpDisplay.Enabled(False)
+Gui.F_Template.drpDisplay.FontName("Arial")
+Gui.F_Template.drpDisplay.FontSize(8)
+Gui.F_Template.drpDisplay.TabStop(True)
+Gui.F_Template.drpDisplay.TabIndex(10)
+Gui.F_Template.drpDisplay.Tooltip("")
+Gui.F_Template.drpDisplay.ControlGroup(0)
+Gui.F_Template.drpDisplay.DefaultValue("")
+
+Gui.F_Template.drpDisplay.Event(click,drpdisplay_click)
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sMode.Declare(String,"N")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Debug.SetLA("Opens a connection to Pervasive using the current Global Shop user's credentials")
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+Gui.F_Mode.drpmode.additem("New Template")
+Gui.F_Mode.drpMode.AddItem("Edit Template")
+Gui.F_Mode.drpMode.AddItem("Delete Template")
+
+Gui.F_Mode..Show
+
+F.Intrinsic.Debug.Stop
+
+
+Program.Sub.Main.End
+
+program.sub.f_mode_unload.start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+
+program.sub.f_mode_unload.end
+
+program.sub.drpmode_click.start
+
+F.Intrinsic.Debug.SetLA("Case structure that enables or disables various fields based on the Mode selected.  Also sets the global variable sMode as either N, O, or D")
+
+F.Intrinsic.Control.SelectCase(V.Screen.F_Mode!drpMode.Text)
+	F.Intrinsic.Control.Case("New Template")
+		V.Global.sMode.Set("N")
+		Gui.F_Template.cmdSave.Enabled(True)
+		Gui.F_Template.cmdSave.Visible(True)
+		Gui.F_Template.txtDisplay.Enabled(True)
+		Gui.F_Template.txtDisplay.Visible(True)
+	F.Intrinsic.Control.Case("Edit Template")
+		V.Global.sMode.Set("O")
+		Gui.F_Template.cmdSave.Enabled(true)
+		Gui.F_Template.cmdSave.Visible(true)
+		Gui.F_Template.drpDisplay.Enabled(true)
+		Gui.F_Template.drpDisplay.Visible(true)
+		F.Intrinsic.Control.CallSub(Populate_templates)
+	F.Intrinsic.Control.Case("Delete Template")
+		V.Global.sMode.Set("D")
+		Gui.F_Template.txtFileName.Enabled(false)
+		Gui.F_Template.drpDisplay.Enabled(true)
+		Gui.F_Template.drpDisplay.Visible(true)
+		Gui.F_Template.cmdDelete.enabled(true)
+		Gui.F_Template.cmdDelete.Visible(true)
+		Gui.F_Template.chkDescr1.Enabled(false)
+		Gui.F_Template.chkDescr2.Enabled(false)
+		Gui.F_Template.chkDescr3.Enabled(false)
+		F.Intrinsic.Control.CallSub(Populate_templates)
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Debug.SetLA("Hides the mode selection form and shows the Template Maint form")
+Gui.F_Mode..Visible(false)
+Gui.F_Template..Show
+
+program.sub.drpmode_click.end
+
+program.sub.f_template_unload.start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+program.sub.f_template_unload.end
+
+program.sub.cmdsave_click.start
+Variable.Local.sDisplay.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.bWrite.Declare(Boolean)
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Debug.SetLA("Reads current mode and sets sDisplay to corresponding value, either from the txt or the drp")
+F.Intrinsic.Control.If(V.Global.sMode,=,"N")
+	V.Local.sDisplay.Set(V.Screen.F_Template!txtDisplay.Text)
+F.Intrinsic.Control.ElseIf(V.Global.sMode,=,"O")
+	V.Local.sDisplay.Set(V.Screen.f_template!drpdisplay.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Checks to see if sDisplay is blank, then notifies user and exits sub if true")
+F.Intrinsic.Control.If(V.Local.sDisplay,=,"")
+	F.Intrinsic.Control.If(V.Global.sMode,=,"N")
+		F.Intrinsic.UI.Msgbox("You must provide a name for the new template")
+	F.Intrinsic.Control.ElseIf(V.Global.sMode,=,"O")
+		F.Intrinsic.UI.Msgbox("You must select a template to edit")
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Checks to see if filename is blank, then notifies user to enter filename and exits sub")
+F.Intrinsic.Control.If(V.Screen.F_Template!txtFileName.text,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter a filename")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Checks filename to see if it is a valid Windows filename")
+F.Intrinsic.Control.CallSub(Validfilename)
+F.Intrinsic.Control.If(V.Args.bRet,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Disables save button and form")
+Gui.F_Template.cmdSave.enabled(false)
+Gui.F_Template..Enabled(False)
+
+V.Local.bWrite.Set(False)
+
+F.Intrinsic.Control.If(V.Global.sMode,=,"N")
+	F.Intrinsic.String.Concat("SELECT * FROM ATG_3185_TEMPLATES WHERE DISPLAY = '",V.Screen.F_Template!txtDisplay.Text,"'",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRW("rstTemplate",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.EOF,<>,True)
+		F.Intrinsic.UI.Msgbox("A template with this display name already exists")
+		Gui.F_Template.cmdSave.Enabled(True)
+		Gui.F_Template..Enabled(true)
+		F.ODBC.conx!rstTemplate.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.conx!rstTemplate.AddNew
+	F.ODBC.conx!rstTemplate.Set!DISPLAY(V.Screen.F_Template!txtDisplay.Text)
+
+	V.Local.bWrite.Set(True)
+F.Intrinsic.Control.Else
+	F.Intrinsic.string.Concat("SELECT * FROM ATG_3185_TEMPLATES WHERE TEMPLATE_ID = ",V.Screen.F_TEMPLATE!drpDisplay.ItemData,V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRW("rstTemplate",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.EOF,<>,True)
+		V.Local.bWrite.Set(True)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("This template no longer exists")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bWrite,=,True)
+	F.ODBC.conx!rstTemplate.Set!FILE_NAME(V.Screen.F_Template!txtFileName.Text)
+	F.ODBC.conx!rstTemplate.Set!DESCR_1(V.Screen.F_Template!chkDescr1.Value)
+	F.ODBC.conx!rstTemplate.Set!DESCR_2(V.Screen.F_Template!chkDescr2.Value)
+	F.ODBC.conx!rstTemplate.Set!DESCR_3(V.Screen.F_Template!chkDescr3.Value)
+	F.ODBC.conx!rstTemplate.Update
+F.Intrinsic.Control.endif
+F.ODBC.conx!rstTemplate.Close
+
+F.Intrinsic.Control.CallSub(Clear)
+
+Gui.F_Template.cmdSave.Enabled(True)
+Gui.F_Template..Enabled(true)
+
+
+
+
+	
+program.sub.cmdsave_click.end
+
+program.sub.cmddelete_click.start
+V.Local.sDisplay.Declare(String)
+V.Local.sDisplay.Set(V.Screen.f_template!drpdisplay.Text)
+V.Local.sQuery.Declare(String)
+V.Local.iTemplate.declare(Long)
+
+F.Intrinsic.Control.If(V.Screen.F_Template!drpDisplay.Text,<>,"")
+		
+	Gui.F_Template.cmdSave.enabled(false)
+	Gui.F_Template..Enabled(False)
+	V.Local.iTemplate.Set(V.Screen.F_Template!drpDisplay.ItemData)
+	Gui.F_Template.drpDisplay.RemoveItem(V.Screen.F_Template!drpDisplay.ListIndex)
+	F.Intrinsic.string.Concat("DELETE FROM ATG_3185_TEMPLATES WHERE TEMPLATE_ID = ",V.local.iTemplate,V.Local.sQuery)
+
+	F.ODBC.Connection!conX.Execute(V.Local.sQuery)
+
+	F.Intrinsic.Control.CallSub(Clear)
+
+	Gui.F_Template.cmdSave.Enabled(True)
+	Gui.F_Template..Enabled(true)
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please select a template to delete")
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+
+
+
+
+program.sub.cmddelete_click.end
+
+Program.Sub.Clear.Start
+Gui.F_Template.chkDescr1.Value(0)
+Gui.F_Template.chkDescr2.Value(0)
+Gui.F_Template.chkDescr3.Value(0)
+Gui.F_Template.drpDisplay.Text("")
+Gui.F_Template.txtDisplay.Text("")
+Gui.F_Template.txtFileName.Text("")
+
+
+Program.Sub.Clear.End
+
+Program.Sub.Populate_Templates.Start
+V.Local.sQuery.Declare(String)
+V.Local.sQuery.Set("SELECT * FROM ATG_3185_TEMPLATES ORDER BY DISPLAY ASC")
+
+F.ODBC.Connection!conx.OpenRecordsetRO("rstTemplate",V.Local.sQuery)
+F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstTemplate.EOF,=,True)
+	Gui.F_Template.drpDisplay.AddItem(V.ODBC.conx!rstTemplate.FieldVal!DISPLAY,V.ODBC.conx!rstTemplate.FieldVal!TEMPLATE_ID)
+	F.ODBC.conx!rstTemplate.MoveNext
+F.Intrinsic.Control.Loop
+
+F.ODBC.conx!rstTemplate.Close
+
+Program.Sub.Populate_Templates.End
+
+program.sub.drpdisplay_click.start
+V.Local.sQuery.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Template!drpDisplay.Text,<>,"")
+	Gui.F_Template..enabled(false)
+
+	F.Intrinsic.string.Concat("SELECT * FROM ATG_3185_TEMPLATES WHERE TEMPLATE_ID =",V.Screen.F_Template!drpDisplay.ItemData,V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstTemplate",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.EOF,<>,True)
+		Gui.F_Template.txtFileName.Text(V.ODBC.conx!rstTemplate.FieldValTrim!FILE_NAME)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.FieldVal!DESCR_1,=,True)
+			Gui.F_Template.chkDescr1.Value(1)
+		F.Intrinsic.Control.Else
+			Gui.F_Template.chkDescr1.Value(0)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.FieldVal!DESCR_2,=,True)
+			Gui.F_Template.chkDescr2.Value(1)
+		F.Intrinsic.Control.Else
+			Gui.F_Template.chkDescr2.Value(0)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.ODBC.conx!rstTemplate.FieldVal!DESCR_3,=,True)
+			Gui.F_Template.chkDescr3.Value(1)
+		F.Intrinsic.Control.Else
+			Gui.F_Template.chkDescr3.Value(0)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.conx!rstTemplate.Close
+
+	Gui.F_Template..Enabled(true)
+F.Intrinsic.Control.EndIf
+
+program.sub.drpdisplay_click.end
+
+Program.Sub.ValidFilename.Start
+V.Local.bRet.Declare(Boolean)
+
+F.Intrinsic.File.IsFilenameValid(V.Screen.F_Template!txtFileName.Text,V.Local.bRet)
+
+F.Intrinsic.Control.if(V.Local.bRet,=,False)
+	F.Intrinsic.UI.Msgbox("Please enter a valid filename")
+F.Intrinsic.Control.endif
+
+F.Intrinsic.Variable.AddRV("bRet",V.Local.bRet)
+
+
+Program.Sub.ValidFilename.End
+
+
+
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
