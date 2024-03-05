@@ -1,0 +1,219 @@
+Program.Sub.ScreenSU.Start
+
+Gui.F_Export..Create
+Gui.F_Export..Caption("Export Location")
+Gui.F_Export..Size(5940,1590)
+Gui.F_Export..Position(0,0)
+Gui.F_Export..AlwaysOnTop(False)
+Gui.F_Export..FontName("Arial")
+Gui.F_Export..FontSize(8)
+Gui.F_Export..ForeColor(0)
+Gui.F_Export..Backcolor(-2147483633)
+Gui.F_Export..ControlBox(True)
+Gui.F_Export..MaxButton(False)
+Gui.F_Export..MinButton(True)
+Gui.F_Export..MousePointer(0)
+Gui.F_Export..Moveable(True)
+Gui.F_Export..Sizeable(False)
+Gui.F_Export..ShowInTaskBar(True)
+Gui.F_Export..TitleBar(True)
+
+Gui.F_Export..Event(unload,f_export_unload)
+
+Gui.F_Export.txtExport.Create(textbox)
+Gui.F_Export.txtExport.Text("")
+Gui.F_Export.txtExport.Visible(True)
+Gui.F_Export.txtExport.Size(5000,300)
+Gui.F_Export.txtExport.Zorder(0)
+Gui.F_Export.txtExport.Position(200,200)
+Gui.F_Export.txtExport.Enabled(True)
+Gui.F_Export.txtExport.Alignment(0)
+Gui.F_Export.txtExport.FontName("Arial")
+Gui.F_Export.txtExport.FontSize(8)
+Gui.F_Export.txtExport.Backcolor(-2147483643)
+Gui.F_Export.txtExport.BorderStyle(1)
+Gui.F_Export.txtExport.MaxLength(75)
+Gui.F_Export.txtExport.TabStop(True)
+Gui.F_Export.txtExport.TabIndex(0)
+Gui.F_Export.txtExport.Tooltip("")
+Gui.F_Export.txtExport.ControlGroup(0)
+Gui.F_Export.txtExport.DefaultValue("")
+
+Gui.F_Export.txtExport.Event(keypress,txtexport_keypress)
+
+Gui.F_Export.cmdExport.Create(button)
+Gui.F_Export.cmdExport.Caption("^")
+Gui.F_Export.cmdExport.Visible(True)
+Gui.F_Export.cmdExport.Size(300,300)
+Gui.F_Export.cmdExport.Zorder(0)
+Gui.F_Export.cmdExport.Position(5300,200)
+Gui.F_Export.cmdExport.Enabled(True)
+Gui.F_Export.cmdExport.FontName("Arial")
+Gui.F_Export.cmdExport.FontSize(8)
+Gui.F_Export.cmdExport.TabStop(True)
+Gui.F_Export.cmdExport.TabIndex(1)
+Gui.F_Export.cmdExport.Tooltip("")
+Gui.F_Export.cmdExport.ControlGroup(0)
+Gui.F_Export.cmdExport.DefaultValue("")
+
+Gui.F_Export.cmdExport.Event(click,cmdexport_click)
+
+Gui.F_Export.cmdSave.Create(button)
+Gui.F_Export.cmdSave.Caption("Save")
+Gui.F_Export.cmdSave.Visible(True)
+Gui.F_Export.cmdSave.Size(855,375)
+Gui.F_Export.cmdSave.Zorder(0)
+Gui.F_Export.cmdSave.Position(200,600)
+Gui.F_Export.cmdSave.Enabled(True)
+Gui.F_Export.cmdSave.FontName("Arial")
+Gui.F_Export.cmdSave.FontSize(8)
+Gui.F_Export.cmdSave.TabStop(True)
+Gui.F_Export.cmdSave.TabIndex(2)
+Gui.F_Export.cmdSave.Tooltip("")
+Gui.F_Export.cmdSave.ControlGroup(0)
+Gui.F_Export.cmdSave.DefaultValue("")
+
+Gui.F_Export.cmdSave.Event(click,cmdsave_click)
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'TPH for Fullerton
+'Quote # 1613
+'08/05/2010
+'Inventory>Administraton>Template Export Location (custom menu item)
+
+F.Intrinsic.Debug.SetLA("Open Connection")
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Debug.SetLA("Populate screen")
+F.Intrinsic.Control.CallSub(Populate)
+
+F.Intrinsic.Debug.SetLA("Show Form")
+Gui.F_Export..Show
+
+
+
+
+Program.Sub.Main.End
+
+program.sub.f_export_unload.start
+F.Intrinsic.Debug.SetLA("Close Connection")
+F.ODBC.Connection!conx.Close
+
+F.Intrinsic.Debug.SetLA("End Program")
+F.Intrinsic.Control.End
+
+program.sub.f_export_unload.end
+
+program.sub.cmdexport_click.start
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Debug.SetLA("Opens folder browser")
+f.Intrinsic.UI.FolderBrowser("Select Location for Export",V.Local.sRet)
+
+F.Intrinsic.Debug.SetLA("Writing path to text box")
+Gui.F_Export.txtExport.Text(V.Local.sRet)
+
+
+
+
+
+
+
+program.sub.cmdexport_click.end
+
+program.sub.cmdsave_click.start
+F.Intrinsic.Control.CallSub(Save)
+
+
+program.sub.cmdsave_click.end
+
+Program.Sub.Populate.Start
+V.Local.sQuery.Declare(String)
+
+F.Intrinsic.Debug.SetLA("Opens table ATG_3185_EXPORT_LOC")
+V.Local.sQuery.Set("SELECT * FROM ATG_3185_EXPORT_LOC")
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLocation",V.Local.sQuery)
+
+F.Intrinsic.Debug.SetLA("Writes export location to text field if rst is not empty")
+F.Intrinsic.Control.If(V.ODBC.conx!rstLocation.EOF,<>,True)
+	Gui.F_Export.txtExport.Text(V.ODBC.conx!rstLocation.FieldValTrim!FILE_LOC)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.conx!rstLocation.Close
+
+
+
+
+Program.Sub.Populate.End
+
+program.sub.txtexport_keypress.start
+F.Intrinsic.Debug.SetLA("Calls save subroutine if enter key is pressed")
+F.Intrinsic.Control.If(V.Args.keyascii,=,13)
+	F.Intrinsic.Control.CallSub(Save)
+F.Intrinsic.Control.EndIf
+
+program.sub.txtexport_keypress.end
+
+Program.Sub.Save.Start
+V.Local.sQuery.Declare(String)
+V.Local.sLocation.Declare(String)
+V.Local.bRet.Declare(Boolean)
+
+F.Intrinsic.String.Trim(V.Screen.F_Export!txtExport.Text,V.Local.sLocation)
+
+F.Intrinsic.Debug.SetLA("Exits sub if no export location is selected")
+F.Intrinsic.Control.If(V.Local.sLocation,=,"")
+	F.Intrinsic.UI.Msgbox("Please select an export location")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Endif
+
+F.Intrinsic.Debug.SetLA("Exits sub if file path does not exist")
+F.Intrinsic.File.DirExists(V.Local.sLocation,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,False)
+	F.Intrinsic.UI.Msgbox("Please enter a valid export location")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+
+Gui.F_Export.cmdSave.Enabled(false)
+Gui.F_Export..Enabled(false)
+
+F.Intrinsic.Debug.SetLA("Opens table ATG_3185_EXPORT_LOC")
+V.Local.sQuery.Set("SELECT * FROM ATG_3185_EXPORT_LOC")
+F.ODBC.Connection!conx.OpenRecordsetRW("rstLocation",V.Local.sQuery)
+
+F.Intrinsic.Debug.SetLA("Adds new record if recordset is empty")
+F.Intrinsic.Control.If(V.ODBC.conx!rstLocation.EOF,=,True)
+	F.odbc.conx!rstLocation.AddNew
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Writes to record and updates")
+F.ODBC.conx!rstLocation.Set!FILE_LOC(V.Local.sLocation)
+F.ODBC.conx!rstLocation.Update
+
+F.Intrinsic.Debug.SetLA("Close recordset")
+F.ODBC.conx!rstLocation.Close
+
+F.Intrinsic.Debug.SetLA("Unload")
+F.Intrinsic.Control.CallSub(F_export_unload)
+
+
+	
+
+
+
+
+Program.Sub.Save.End
+
+
+
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
