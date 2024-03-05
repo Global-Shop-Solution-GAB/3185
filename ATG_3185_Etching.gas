@@ -1,0 +1,1057 @@
+Program.Sub.ScreenSU.Start
+
+Gui.F_Etching..Create
+Gui.F_Etching..Caption("Etching Data Entry")
+Gui.F_Etching..Size(5200,5400)
+Gui.F_Etching..Position(0,0)
+Gui.F_Etching..AlwaysOnTop(False)
+Gui.F_Etching..FontName("Arial")
+Gui.F_Etching..FontSize(8)
+Gui.F_Etching..ForeColor(0)
+Gui.F_Etching..Backcolor(-2147483633)
+Gui.F_Etching..ControlBox(True)
+Gui.F_Etching..MaxButton(False)
+Gui.F_Etching..MinButton(True)
+Gui.F_Etching..MousePointer(0)
+Gui.F_Etching..Moveable(True)
+Gui.F_Etching..Sizeable(False)
+Gui.F_Etching..ShowInTaskBar(True)
+Gui.F_Etching..TitleBar(True)
+
+Gui.F_Etching..Event(unload,f_etching_unload)
+
+Gui.F_Etching.frmDescr1.Create(frame)
+Gui.F_Etching.frmDescr1.Caption("")
+Gui.F_Etching.frmDescr1.Visible(True)
+Gui.F_Etching.frmDescr1.Size(4650,550)
+Gui.F_Etching.frmDescr1.Zorder(0)
+Gui.F_Etching.frmDescr1.Position(200,1400)
+Gui.F_Etching.frmDescr1.Enabled(True)
+Gui.F_Etching.frmDescr1.BorderStyle(0)
+Gui.F_Etching.frmDescr1.FontName("Arial")
+Gui.F_Etching.frmDescr1.FontSize(8)
+Gui.F_Etching.frmDescr1.Tooltip("")
+
+
+Gui.F_Etching.frmDescr2.Create(frame)
+Gui.F_Etching.frmDescr2.Caption("")
+Gui.F_Etching.frmDescr2.Visible(True)
+Gui.F_Etching.frmDescr2.Size(4650,550)
+Gui.F_Etching.frmDescr2.Zorder(0)
+Gui.F_Etching.frmDescr2.Position(200,2000)
+Gui.F_Etching.frmDescr2.Enabled(True)
+Gui.F_Etching.frmDescr2.BorderStyle(0)
+Gui.F_Etching.frmDescr2.FontName("Arial")
+Gui.F_Etching.frmDescr2.FontSize(8)
+Gui.F_Etching.frmDescr2.Tooltip("")
+
+
+Gui.F_Etching.frmDescr3.Create(frame)
+Gui.F_Etching.frmDescr3.Caption("")
+Gui.F_Etching.frmDescr3.Visible(True)
+Gui.F_Etching.frmDescr3.Size(4650,550)
+Gui.F_Etching.frmDescr3.Zorder(0)
+Gui.F_Etching.frmDescr3.Position(200,2600)
+Gui.F_Etching.frmDescr3.Enabled(True)
+Gui.F_Etching.frmDescr3.BorderStyle(0)
+Gui.F_Etching.frmDescr3.FontName("Arial")
+Gui.F_Etching.frmDescr3.FontSize(8)
+Gui.F_Etching.frmDescr3.Tooltip("")
+
+
+Gui.F_Etching.frmFooter.Create(frame)
+Gui.F_Etching.frmFooter.Caption("")
+Gui.F_Etching.frmFooter.Visible(True)
+Gui.F_Etching.frmFooter.Size(4650,1550)
+Gui.F_Etching.frmFooter.Zorder(0)
+Gui.F_Etching.frmFooter.Position(200,3200)
+Gui.F_Etching.frmFooter.Enabled(True)
+Gui.F_Etching.frmFooter.BorderStyle(0)
+Gui.F_Etching.frmFooter.FontName("Arial")
+Gui.F_Etching.frmFooter.FontSize(8)
+Gui.F_Etching.frmFooter.Tooltip("")
+
+
+Gui.F_Etching.lbl1.Create(label)
+Gui.F_Etching.lbl1.Caption("Tool Diameter / Thickness")
+Gui.F_Etching.lbl1.Visible(True)
+Gui.F_Etching.lbl1.Size(1935,255)
+Gui.F_Etching.lbl1.Zorder(1)
+Gui.F_Etching.lbl1.Position(200,800)
+Gui.F_Etching.lbl1.Enabled(True)
+Gui.F_Etching.lbl1.Alignment(0)
+Gui.F_Etching.lbl1.FontName("Arial")
+Gui.F_Etching.lbl1.FontSize(8)
+Gui.F_Etching.lbl1.Backcolor(-2147483633)
+Gui.F_Etching.lbl1.BackStyle(0)
+Gui.F_Etching.lbl1.Tooltip("")
+Gui.F_Etching.lbl1.ControlGroup(0)
+
+
+Gui.F_Etching.lbl2.Create(label)
+Gui.F_Etching.lbl2.Caption("Part")
+Gui.F_Etching.lbl2.Visible(True)
+Gui.F_Etching.lbl2.Size(1935,255)
+Gui.F_Etching.lbl2.Zorder(1)
+Gui.F_Etching.lbl2.Position(200,200)
+Gui.F_Etching.lbl2.Enabled(True)
+Gui.F_Etching.lbl2.Alignment(0)
+Gui.F_Etching.lbl2.FontName("Arial")
+Gui.F_Etching.lbl2.FontSize(8)
+Gui.F_Etching.lbl2.Backcolor(-2147483633)
+Gui.F_Etching.lbl2.BackStyle(0)
+Gui.F_Etching.lbl2.Tooltip("")
+Gui.F_Etching.lbl2.ControlGroup(0)
+
+
+Gui.F_Etching.txtPart.Create(textbox)
+Gui.F_Etching.txtPart.Text("")
+Gui.F_Etching.txtPart.Visible(True)
+Gui.F_Etching.txtPart.Size(2000,300)
+Gui.F_Etching.txtPart.Zorder(0)
+Gui.F_Etching.txtPart.Position(200,400)
+Gui.F_Etching.txtPart.Enabled(False)
+Gui.F_Etching.txtPart.Alignment(0)
+Gui.F_Etching.txtPart.FontName("Arial")
+Gui.F_Etching.txtPart.FontSize(8)
+Gui.F_Etching.txtPart.Backcolor(-2147483643)
+Gui.F_Etching.txtPart.BorderStyle(1)
+Gui.F_Etching.txtPart.TabStop(True)
+Gui.F_Etching.txtPart.TabIndex(6)
+Gui.F_Etching.txtPart.Tooltip("")
+Gui.F_Etching.txtPart.ControlGroup(0)
+Gui.F_Etching.txtPart.DefaultValue("")
+
+
+Gui.F_Etching.lbl3.Create(label)
+Gui.F_Etching.lbl3.Caption("Rev")
+Gui.F_Etching.lbl3.Visible(True)
+Gui.F_Etching.lbl3.Size(1935,255)
+Gui.F_Etching.lbl3.Zorder(1)
+Gui.F_Etching.lbl3.Position(2300,200)
+Gui.F_Etching.lbl3.Enabled(True)
+Gui.F_Etching.lbl3.Alignment(0)
+Gui.F_Etching.lbl3.FontName("Arial")
+Gui.F_Etching.lbl3.FontSize(8)
+Gui.F_Etching.lbl3.Backcolor(-2147483633)
+Gui.F_Etching.lbl3.BackStyle(0)
+Gui.F_Etching.lbl3.Tooltip("")
+Gui.F_Etching.lbl3.ControlGroup(0)
+
+
+Gui.F_Etching.txtRev.Create(textbox)
+Gui.F_Etching.txtRev.Text("")
+Gui.F_Etching.txtRev.Visible(True)
+Gui.F_Etching.txtRev.Size(500,300)
+Gui.F_Etching.txtRev.Zorder(0)
+Gui.F_Etching.txtRev.Position(2300,400)
+Gui.F_Etching.txtRev.Enabled(False)
+Gui.F_Etching.txtRev.Alignment(0)
+Gui.F_Etching.txtRev.FontName("Arial")
+Gui.F_Etching.txtRev.FontSize(8)
+Gui.F_Etching.txtRev.Backcolor(-2147483643)
+Gui.F_Etching.txtRev.BorderStyle(1)
+Gui.F_Etching.txtRev.TabStop(True)
+Gui.F_Etching.txtRev.TabIndex(8)
+Gui.F_Etching.txtRev.Tooltip("")
+Gui.F_Etching.txtRev.ControlGroup(0)
+Gui.F_Etching.txtRev.DefaultValue("")
+
+
+Gui.F_Etching.lbl4.Create(label)
+Gui.F_Etching.lbl4.Caption("Location")
+Gui.F_Etching.lbl4.Visible(True)
+Gui.F_Etching.lbl4.Size(1935,255)
+Gui.F_Etching.lbl4.Zorder(1)
+Gui.F_Etching.lbl4.Position(2900,200)
+Gui.F_Etching.lbl4.Enabled(True)
+Gui.F_Etching.lbl4.Alignment(0)
+Gui.F_Etching.lbl4.FontName("Arial")
+Gui.F_Etching.lbl4.FontSize(8)
+Gui.F_Etching.lbl4.Backcolor(-2147483633)
+Gui.F_Etching.lbl4.BackStyle(0)
+Gui.F_Etching.lbl4.Tooltip("")
+Gui.F_Etching.lbl4.ControlGroup(0)
+
+
+Gui.F_Etching.txtLoc.Create(textbox)
+Gui.F_Etching.txtLoc.Text("")
+Gui.F_Etching.txtLoc.Visible(True)
+Gui.F_Etching.txtLoc.Size(800,300)
+Gui.F_Etching.txtLoc.Zorder(0)
+Gui.F_Etching.txtLoc.Position(2900,400)
+Gui.F_Etching.txtLoc.Enabled(False)
+Gui.F_Etching.txtLoc.Alignment(0)
+Gui.F_Etching.txtLoc.FontName("Arial")
+Gui.F_Etching.txtLoc.FontSize(8)
+Gui.F_Etching.txtLoc.Backcolor(-2147483643)
+Gui.F_Etching.txtLoc.BorderStyle(1)
+Gui.F_Etching.txtLoc.MaxLength(2)
+Gui.F_Etching.txtLoc.TabStop(True)
+Gui.F_Etching.txtLoc.TabIndex(10)
+Gui.F_Etching.txtLoc.Tooltip("")
+Gui.F_Etching.txtLoc.ControlGroup(0)
+Gui.F_Etching.txtLoc.DefaultValue("")
+
+
+Gui.F_Etching.lbl5.Create(label)
+Gui.F_Etching.lbl5.Caption("Template")
+Gui.F_Etching.lbl5.Visible(True)
+Gui.F_Etching.lbl5.Size(1935,255)
+Gui.F_Etching.lbl5.Zorder(1)
+Gui.F_Etching.lbl5.Position(2300,800)
+Gui.F_Etching.lbl5.Enabled(True)
+Gui.F_Etching.lbl5.Alignment(0)
+Gui.F_Etching.lbl5.FontName("Arial")
+Gui.F_Etching.lbl5.FontSize(8)
+Gui.F_Etching.lbl5.Backcolor(-2147483633)
+Gui.F_Etching.lbl5.BackStyle(0)
+Gui.F_Etching.lbl5.Tooltip("")
+Gui.F_Etching.lbl5.ControlGroup(0)
+
+
+Gui.F_Etching.txtDiameter.Create(textbox)
+Gui.F_Etching.txtDiameter.Text("")
+Gui.F_Etching.txtDiameter.Visible(True)
+Gui.F_Etching.txtDiameter.Size(2000,300)
+Gui.F_Etching.txtDiameter.Zorder(0)
+Gui.F_Etching.txtDiameter.Position(200,1000)
+Gui.F_Etching.txtDiameter.Enabled(True)
+Gui.F_Etching.txtDiameter.Alignment(0)
+Gui.F_Etching.txtDiameter.FontName("Arial")
+Gui.F_Etching.txtDiameter.FontSize(8)
+Gui.F_Etching.txtDiameter.Backcolor(-2147483643)
+Gui.F_Etching.txtDiameter.BorderStyle(1)
+Gui.F_Etching.txtDiameter.MaxLength(15)
+Gui.F_Etching.txtDiameter.TabStop(True)
+Gui.F_Etching.txtDiameter.TabIndex(12)
+Gui.F_Etching.txtDiameter.Tooltip("")
+Gui.F_Etching.txtDiameter.ControlGroup(0)
+Gui.F_Etching.txtDiameter.DefaultValue("")
+
+
+Gui.F_Etching.drpTemplate.Create(dropdownlist)
+Gui.F_Etching.drpTemplate.Visible(True)
+Gui.F_Etching.drpTemplate.Size(2500,330)
+Gui.F_Etching.drpTemplate.Zorder(0)
+Gui.F_Etching.drpTemplate.Position(2300,1000)
+Gui.F_Etching.drpTemplate.Enabled(True)
+Gui.F_Etching.drpTemplate.FontName("Arial")
+Gui.F_Etching.drpTemplate.FontSize(8)
+Gui.F_Etching.drpTemplate.TabStop(True)
+Gui.F_Etching.drpTemplate.TabIndex(13)
+Gui.F_Etching.drpTemplate.Tooltip("")
+Gui.F_Etching.drpTemplate.ControlGroup(0)
+Gui.F_Etching.drpTemplate.DefaultValue("")
+
+Gui.F_Etching.drpTemplate.Event(click,drptemplate_click)
+
+Gui.F_Etching.lbl6.Create(label)
+Gui.F_Etching.lbl6.Caption("Description 1")
+Gui.F_Etching.lbl6.Visible(True)
+Gui.F_Etching.lbl6.Size(1230,255)
+Gui.F_Etching.lbl6.Zorder(1)
+Gui.F_Etching.lbl6.Position(0,0)
+Gui.F_Etching.lbl6.Enabled(True)
+Gui.F_Etching.lbl6.Alignment(0)
+Gui.F_Etching.lbl6.FontName("Arial")
+Gui.F_Etching.lbl6.FontSize(8)
+Gui.F_Etching.lbl6.Backcolor(-2147483633)
+Gui.F_Etching.lbl6.BackStyle(0)
+Gui.F_Etching.lbl6.Parent("frmdescr1")
+Gui.F_Etching.lbl6.Tooltip("")
+Gui.F_Etching.lbl6.ControlGroup(0)
+
+
+Gui.F_Etching.txtDescr1.Create(textbox)
+Gui.F_Etching.txtDescr1.Text("")
+Gui.F_Etching.txtDescr1.Visible(True)
+Gui.F_Etching.txtDescr1.Size(4600,300)
+Gui.F_Etching.txtDescr1.Zorder(0)
+Gui.F_Etching.txtDescr1.Position(0,200)
+Gui.F_Etching.txtDescr1.Enabled(True)
+Gui.F_Etching.txtDescr1.Alignment(0)
+Gui.F_Etching.txtDescr1.FontName("Arial")
+Gui.F_Etching.txtDescr1.FontSize(8)
+Gui.F_Etching.txtDescr1.Backcolor(-2147483643)
+Gui.F_Etching.txtDescr1.BorderStyle(1)
+Gui.F_Etching.txtDescr1.MaxLength(35)
+Gui.F_Etching.txtDescr1.Parent("frmdescr1")
+Gui.F_Etching.txtDescr1.TabStop(True)
+Gui.F_Etching.txtDescr1.TabIndex(15)
+Gui.F_Etching.txtDescr1.Tooltip("")
+Gui.F_Etching.txtDescr1.ControlGroup(0)
+Gui.F_Etching.txtDescr1.DefaultValue("")
+
+
+Gui.F_Etching.lbl7.Create(label)
+Gui.F_Etching.lbl7.Caption("Description 2")
+Gui.F_Etching.lbl7.Visible(True)
+Gui.F_Etching.lbl7.Size(1230,255)
+Gui.F_Etching.lbl7.Zorder(1)
+Gui.F_Etching.lbl7.Position(0,0)
+Gui.F_Etching.lbl7.Enabled(True)
+Gui.F_Etching.lbl7.Alignment(0)
+Gui.F_Etching.lbl7.FontName("Arial")
+Gui.F_Etching.lbl7.FontSize(8)
+Gui.F_Etching.lbl7.Backcolor(-2147483633)
+Gui.F_Etching.lbl7.BackStyle(0)
+Gui.F_Etching.lbl7.Parent("frmdescr2")
+Gui.F_Etching.lbl7.Tooltip("")
+Gui.F_Etching.lbl7.ControlGroup(0)
+
+
+Gui.F_Etching.txtDescr2.Create(textbox)
+Gui.F_Etching.txtDescr2.Text("")
+Gui.F_Etching.txtDescr2.Visible(True)
+Gui.F_Etching.txtDescr2.Size(4600,300)
+Gui.F_Etching.txtDescr2.Zorder(0)
+Gui.F_Etching.txtDescr2.Position(0,200)
+Gui.F_Etching.txtDescr2.Enabled(True)
+Gui.F_Etching.txtDescr2.Alignment(0)
+Gui.F_Etching.txtDescr2.FontName("Arial")
+Gui.F_Etching.txtDescr2.FontSize(8)
+Gui.F_Etching.txtDescr2.Backcolor(-2147483643)
+Gui.F_Etching.txtDescr2.BorderStyle(1)
+Gui.F_Etching.txtDescr2.MaxLength(35)
+Gui.F_Etching.txtDescr2.Parent("frmdescr2")
+Gui.F_Etching.txtDescr2.TabStop(True)
+Gui.F_Etching.txtDescr2.TabIndex(17)
+Gui.F_Etching.txtDescr2.Tooltip("")
+Gui.F_Etching.txtDescr2.ControlGroup(0)
+Gui.F_Etching.txtDescr2.DefaultValue("")
+
+
+Gui.F_Etching.lbl8.Create(label)
+Gui.F_Etching.lbl8.Caption("Description 3")
+Gui.F_Etching.lbl8.Visible(True)
+Gui.F_Etching.lbl8.Size(1230,255)
+Gui.F_Etching.lbl8.Zorder(1)
+Gui.F_Etching.lbl8.Position(0,0)
+Gui.F_Etching.lbl8.Enabled(True)
+Gui.F_Etching.lbl8.Alignment(0)
+Gui.F_Etching.lbl8.FontName("Arial")
+Gui.F_Etching.lbl8.FontSize(8)
+Gui.F_Etching.lbl8.Backcolor(-2147483633)
+Gui.F_Etching.lbl8.BackStyle(0)
+Gui.F_Etching.lbl8.Parent("frmdescr3")
+Gui.F_Etching.lbl8.Tooltip("")
+Gui.F_Etching.lbl8.ControlGroup(0)
+
+
+Gui.F_Etching.txtDescr3.Create(textbox)
+Gui.F_Etching.txtDescr3.Text("")
+Gui.F_Etching.txtDescr3.Visible(True)
+Gui.F_Etching.txtDescr3.Size(4600,300)
+Gui.F_Etching.txtDescr3.Zorder(0)
+Gui.F_Etching.txtDescr3.Position(0,200)
+Gui.F_Etching.txtDescr3.Enabled(True)
+Gui.F_Etching.txtDescr3.Alignment(0)
+Gui.F_Etching.txtDescr3.FontName("Arial")
+Gui.F_Etching.txtDescr3.FontSize(8)
+Gui.F_Etching.txtDescr3.Backcolor(-2147483643)
+Gui.F_Etching.txtDescr3.BorderStyle(1)
+Gui.F_Etching.txtDescr3.MaxLength(35)
+Gui.F_Etching.txtDescr3.Parent("frmdescr3")
+Gui.F_Etching.txtDescr3.TabStop(True)
+Gui.F_Etching.txtDescr3.TabIndex(19)
+Gui.F_Etching.txtDescr3.Tooltip("")
+Gui.F_Etching.txtDescr3.ControlGroup(0)
+Gui.F_Etching.txtDescr3.DefaultValue("")
+
+
+Gui.F_Etching.lbl9.Create(label)
+Gui.F_Etching.lbl9.Caption("Notes")
+Gui.F_Etching.lbl9.Visible(True)
+Gui.F_Etching.lbl9.Size(1935,255)
+Gui.F_Etching.lbl9.Zorder(1)
+Gui.F_Etching.lbl9.Position(0,0)
+Gui.F_Etching.lbl9.Enabled(True)
+Gui.F_Etching.lbl9.Alignment(0)
+Gui.F_Etching.lbl9.FontName("Arial")
+Gui.F_Etching.lbl9.FontSize(8)
+Gui.F_Etching.lbl9.Backcolor(-2147483633)
+Gui.F_Etching.lbl9.BackStyle(0)
+Gui.F_Etching.lbl9.Parent("frmfooter")
+Gui.F_Etching.lbl9.Tooltip("")
+Gui.F_Etching.lbl9.ControlGroup(0)
+
+
+Gui.F_Etching.txtNotes.Create(textboxm)
+Gui.F_Etching.txtNotes.Visible(True)
+Gui.F_Etching.txtNotes.Size(4600,800)
+Gui.F_Etching.txtNotes.Zorder(0)
+Gui.F_Etching.txtNotes.Position(0,200)
+Gui.F_Etching.txtNotes.Enabled(True)
+Gui.F_Etching.txtNotes.Alignment(0)
+Gui.F_Etching.txtNotes.FontName("Arial")
+Gui.F_Etching.txtNotes.FontSize(8)
+Gui.F_Etching.txtNotes.Backcolor(-2147483643)
+Gui.F_Etching.txtNotes.BorderStyle(1)
+Gui.F_Etching.txtNotes.MaxLength(0)
+Gui.F_Etching.txtNotes.NumericOnly(0)
+Gui.F_Etching.txtNotes.Parent("frmfooter")
+Gui.F_Etching.txtNotes.TabStop(True)
+Gui.F_Etching.txtNotes.TabIndex(21)
+Gui.F_Etching.txtNotes.Text("")
+Gui.F_Etching.txtNotes.Tooltip("")
+Gui.F_Etching.txtNotes.ControlGroup(0)
+Gui.F_Etching.txtNotes.DefaultValue("")
+
+
+Gui.F_Etching.cmdSave.Create(button)
+Gui.F_Etching.cmdSave.Caption("Save")
+Gui.F_Etching.cmdSave.Visible(True)
+Gui.F_Etching.cmdSave.Size(900,375)
+Gui.F_Etching.cmdSave.Zorder(0)
+Gui.F_Etching.cmdSave.Position(0,1100)
+Gui.F_Etching.cmdSave.Enabled(True)
+Gui.F_Etching.cmdSave.FontName("Arial")
+Gui.F_Etching.cmdSave.FontSize(8)
+Gui.F_Etching.cmdSave.Parent("frmfooter")
+Gui.F_Etching.cmdSave.TabStop(True)
+Gui.F_Etching.cmdSave.TabIndex(22)
+Gui.F_Etching.cmdSave.Tooltip("")
+Gui.F_Etching.cmdSave.ControlGroup(0)
+Gui.F_Etching.cmdSave.DefaultValue("")
+
+Gui.F_Etching.cmdSave.Event(click,cmdsave_click)
+
+Gui.F_Etching.cmdExport.Create(button)
+Gui.F_Etching.cmdExport.Caption("Export")
+Gui.F_Etching.cmdExport.Visible(True)
+Gui.F_Etching.cmdExport.Size(900,375)
+Gui.F_Etching.cmdExport.Zorder(0)
+Gui.F_Etching.cmdExport.Position(1000,1100)
+Gui.F_Etching.cmdExport.Enabled(True)
+Gui.F_Etching.cmdExport.FontName("Arial")
+Gui.F_Etching.cmdExport.FontSize(8)
+Gui.F_Etching.cmdExport.Parent("frmfooter")
+Gui.F_Etching.cmdExport.TabStop(True)
+Gui.F_Etching.cmdExport.TabIndex(23)
+Gui.F_Etching.cmdExport.Tooltip("")
+Gui.F_Etching.cmdExport.ControlGroup(0)
+Gui.F_Etching.cmdExport.DefaultValue("")
+
+Gui.F_Etching.cmdExport.Event(click,cmdexport_click)
+
+Gui.F_Etching.cmdPrint.Create(button)
+Gui.F_Etching.cmdPrint.Caption("Print")
+Gui.F_Etching.cmdPrint.Visible(True)
+Gui.F_Etching.cmdPrint.Size(900,375)
+Gui.F_Etching.cmdPrint.Zorder(0)
+Gui.F_Etching.cmdPrint.Position(2000,1100)
+Gui.F_Etching.cmdPrint.Enabled(True)
+Gui.F_Etching.cmdPrint.FontName("Arial")
+Gui.F_Etching.cmdPrint.FontSize(8)
+Gui.F_Etching.cmdPrint.Parent("frmfooter")
+Gui.F_Etching.cmdPrint.TabStop(True)
+Gui.F_Etching.cmdPrint.TabIndex(24)
+Gui.F_Etching.cmdPrint.Tooltip("")
+Gui.F_Etching.cmdPrint.ControlGroup(0)
+Gui.F_Etching.cmdPrint.DefaultValue("")
+
+Gui.F_Etching.cmdPrint.Event(click,cmdprint_click)
+
+Gui.F_Etching.cmdPart.Create(button)
+Gui.F_Etching.cmdPart.Caption("^")
+Gui.F_Etching.cmdPart.Visible(True)
+Gui.F_Etching.cmdPart.Size(300,300)
+Gui.F_Etching.cmdPart.Zorder(0)
+Gui.F_Etching.cmdPart.Position(3800,400)
+Gui.F_Etching.cmdPart.Enabled(True)
+Gui.F_Etching.cmdPart.FontName("Arial")
+Gui.F_Etching.cmdPart.FontSize(8)
+Gui.F_Etching.cmdPart.TabStop(True)
+Gui.F_Etching.cmdPart.TabIndex(25)
+Gui.F_Etching.cmdPart.Tooltip("")
+Gui.F_Etching.cmdPart.ControlGroup(0)
+Gui.F_Etching.cmdPart.DefaultValue("")
+
+Gui.F_Etching.cmdPart.Event(click,cmdpart_click)
+
+Gui.F_Etching.cmdLink.Create(button)
+Gui.F_Etching.cmdLink.Caption("Link")
+Gui.F_Etching.cmdLink.Visible(True)
+Gui.F_Etching.cmdLink.Size(500,300)
+Gui.F_Etching.cmdLink.Zorder(0)
+Gui.F_Etching.cmdLink.Position(4200,400)
+Gui.F_Etching.cmdLink.Enabled(True)
+Gui.F_Etching.cmdLink.FontName("Arial")
+Gui.F_Etching.cmdLink.FontSize(8)
+Gui.F_Etching.cmdLink.TabStop(True)
+Gui.F_Etching.cmdLink.TabIndex(26)
+Gui.F_Etching.cmdLink.Tooltip("")
+Gui.F_Etching.cmdLink.ControlGroup(0)
+Gui.F_Etching.cmdLink.DefaultValue("")
+
+Gui.F_Etching.cmdLink.Event(click,cmdlink_click)
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sMode.Declare(String,"N")
+Variable.Global.sExportPath.Declare(String)
+Variable.Global.bBusy.Declare(Boolean,False)
+Variable.UDT.Template.Define("ID",Long,"TEMPLATE_ID")
+Variable.UDT.Template.Define("Display",String,"DISPLAY")
+Variable.UDT.Template.Define("File_Name",String,"FILE_NAME")
+Variable.UDT.Template.Define("Descr1",Boolean,"DESCR_1")
+Variable.UDT.Template.Define("Descr2",Boolean,"DESCR_2")
+Variable.UDT.Template.Define("Descr3",Boolean,"DESCR_3")
+Variable.uGlobal.uTemplates.Declare("Template")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'SMC for Customer Fullerton
+'Hooks 10120, 10220,
+
+Gui.F_Etching.txtPart.Text("ABC")
+Gui.F_Etching.txtRev.Text("01")
+Gui.F_Etching.txtLoc.Text("RR")
+
+'Inventory master Populate
+F.Intrinsic.Control.If(V.Caller.Hook,=,10120)
+	V.Passed.000069.Set("Etching")
+	F.Intrinsic.Control.End
+'Inventory master Script 2
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,10220)
+	F.Intrinsic.Control.If(V.Passed.000007,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a part")
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+	Gui.F_Etching.txtPart.Text(V.Passed.000007)
+	Gui.F_Etching.txtRev.Text(V.Passed.000008)
+	Gui.F_Etching.txtLoc.Text(V.Passed.000009)
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"V")
+		V.Global.sMode.Set("V")
+	F.Intrinsic.Control.Else
+		V.Global.sMode.Set("F")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	V.Global.sMode.Set("T")
+'	F.Intrinsic.UI.Msgbox(V.Caller.Switches)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.Debug.Stop
+V.uGlobal.uTemplates.Redim(-1,-1)
+'V.Global.sMode.Set("F")
+
+F.Intrinsic.Control.CallSub("GetMode")
+F.Intrinsic.Control.CallSub("PopulateTemplates")
+F.Intrinsic.Control.CallSub("Populate")
+Gui.F_Etching..Show
+
+
+Program.Sub.Main.End
+
+program.sub.f_etching_unload.start
+F.ODBC.Connection!conx.Close
+f.Intrinsic.Control.End
+
+program.sub.f_etching_unload.end
+
+program.sub.cmdsave_click.start
+V.Local.sQuery.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sError.Declare(String)
+V.Local.sPart.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!txtPart.Text,<>,"")
+	F.Intrinsic.UI.Msgbox("Please select a part")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!drpTemplate.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a template")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.bBusy,=,True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+V.Global.bBusy.Set(True)
+
+Gui.F_Etching.cmdSave.Enabled(False)
+Gui.F_Etching..Enabled(False)
+
+F.Intrinsic.String.GSSPartString(V.Screen.F_Etching!txtPart.Text,V.Screen.F_Etching!txtRev.Text,V.Local.sPart)
+F.Intrinsic.String.Concat("SELECT * FROM ATG_3185_ETCHING WHERE PART='",V.Local.sPart,"' AND LOC='",V.Screen.F_Etching!txtLoc.Text,"'",V.Local.sQuery)
+F.ODBC.connection!conx.OpenRecordsetRW("rstEtch",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstEtch.EOF,=,True)
+	F.ODBC.conx!rstEtch.AddNew
+	F.ODBC.conx!rstEtch.Set!PART(V.local.sPart)
+	F.ODBC.conx!rstEtch.Set!LOC(V.Screen.F_Etching!txtLoc.Text)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.conx!rstEtch.Set!TOOL_DIAMETER(V.Screen.F_Etching!txtDiameter.Text)
+F.ODBC.conx!rstEtch.Set!TEMPLATE_ID(V.Screen.F_Etching!drpTemplate.ItemData)
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr1.Visible,=,True)
+	F.ODBC.conx!rstEtch.Set!DESCR_1(V.Screen.F_Etching!txtDescr1.Text)
+F.Intrinsic.Control.Else
+	F.ODBC.conx!rstEtch.Set!DESCR_1("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr2.Visible,=,True)
+	F.ODBC.conx!rstEtch.Set!DESCR_2(V.Screen.F_Etching!txtDescr2.Text)
+F.Intrinsic.Control.Else
+	F.ODBC.conx!rstEtch.Set!DESCR_2("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr3.Visible,=,True)
+	F.ODBC.conx!rstEtch.Set!DESCR_3(V.Screen.F_Etching!txtDescr3.Text)
+F.Intrinsic.Control.Else
+	F.ODBC.conx!rstEtch.Set!DESCR_3("")
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstEtch.Set!NOTES(V.Screen.F_Etching!txtNotes.Text)
+
+F.ODBC.conx!rstEtch.Update
+F.ODBC.conx!rstEtch.Close
+
+V.Global.bBusy.Set(False)
+Gui.F_Etching.cmdSave.Enabled(True)
+Gui.F_Etching..Enabled(True)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Concat("Error occured ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.EndIf
+
+	V.Global.bBusy.Set(False)
+	Gui.F_Etching.cmdSave.Enabled(True)
+	Gui.F_Etching..Enabled(True)
+
+program.sub.cmdsave_click.end
+
+program.sub.cmdexport_click.start
+V.Local.sQuery.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sError.Declare(String)
+V.Local.sText.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.sHold.Declare(String)
+V.Local.bValid.Declare(Boolean)
+
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.If(V.Screen.F_Etching!drpTemplate.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a template")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.bBusy,=,True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+V.Global.bBusy.Set(True)
+
+F.Intrinsic.Control.CallSub("GetExportPath")
+F.Intrinsic.Control.If(V.global.sExportPath,=,"")
+	F.Intrinsic.UI.Msgbox("No export file location has been saved or it is invalid.")
+	V.Global.bBusy.Set(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.UDTSeek(V.uGlobal.uTemplates!ID,V.Screen.F_Etching!drpTemplate.ItemData,4,V.Local.iOrd)
+F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.Local.iOrd)!ID,=,V.Screen.F_Etching!drpTemplate.ItemData)
+	F.Intrinsic.String.Right(V.Global.sExportPath.Trim,1,V.Local.sHold)
+	F.Intrinsic.Control.If(V.Local.sHold,=,"\")
+		F.Intrinsic.String.Concat(V.global.sExportPath,V.uGlobal.uTemplates(v.Local.iOrd)!File_Name,V.Local.sFile)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.global.sExportPath,"\",V.uGlobal.uTemplates(v.Local.iOrd)!File_Name,V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Cannot find file name for template.")
+	V.Global.bBusy.Set(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.File.IsFilenameValid(V.Local.sFile,V.Local.bValid)
+'F.Intrinsic.Control.If(V.Local.bValid,=,False)
+'	F.Intrinsic.String.Concat("Invalid File name: ",V.Local.sFile,V.Local.sHold)
+'	F.Intrinsic.UI.Msgbox(V.Local.sHold)
+'	F.Intrinsic.Control.ExitSub
+'F.Intrinsic.Control.EndIf
+
+Gui.F_Etching.cmdExport.Enabled(False)
+Gui.F_Etching..Enabled(False)
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr3.Visible,=,True)
+	V.Local.sText.Set(V.Screen.F_Etching!txtDescr3.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr2.Visible,=,True)
+	F.Intrinsic.Control.If(V.Local.sText,<>,"")
+		F.Intrinsic.String.Concat(V.Screen.F_Etching!txtDescr2.Text,V.Ambient.NewLine,V.Local.sText,V.Local.sText)
+	F.Intrinsic.Control.Else
+		V.Local.sText.Set(V.Screen.F_Etching!txtDescr2.Text)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!frmDescr1.Visible,=,True)
+	F.Intrinsic.Control.If(V.Local.sText,<>,"")
+		F.Intrinsic.String.Concat(V.Screen.F_Etching!txtDescr1.Text,V.Ambient.NewLine,V.Local.sText,V.Local.sText)
+	F.Intrinsic.Control.Else
+		V.Local.sText.Set(V.Screen.F_Etching!txtDescr1.Text)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sText)
+
+V.Global.bBusy.Set(False)
+Gui.F_Etching.cmdExport.Enabled(True)
+Gui.F_Etching..Enabled(True)
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Concat("Error occured ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.EndIf
+
+	V.Global.bBusy.Set(False)
+	Gui.F_Etching.cmdExport.Enabled(True)
+	Gui.F_Etching..Enabled(True)
+
+
+program.sub.cmdexport_click.end
+
+program.sub.cmdprint_click.start
+V.Local.sQuery.Declare(String)
+V.Local.sError.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.sText.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!txtPart.Text,<>,"")
+	F.Intrinsic.UI.Msgbox("Please select a part")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.bBusy,=,True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+V.Global.bBusy.Set(True)
+
+Gui.F_Etching.cmdPrint.Enabled(False)
+Gui.F_Etching..Enabled(False)
+
+V.Local.sText.Set(V.Screen.F_Etching!txtDiameter.Text)
+'F.Intrinsic.String.Concat(V.Local.sText,V.Ambient.NewLine,V.Screen.F_Etching!drpTemplate.Text,V.Local.sText)
+'F.Intrinsic.String.Concat(V.Local.sText,V.Ambient.NewLine,V.Screen.F_Etching!txtDescr1.Text,V.Local.sText)
+'F.Intrinsic.String.Concat(V.Local.sText,V.Ambient.NewLine,V.Screen.F_Etching!txtDescr2.Text,V.Local.sText)
+'F.Intrinsic.String.Concat(V.Local.sText,V.Ambient.NewLine,V.Screen.F_Etching!txtDescr3.Text,V.Local.sText)
+'F.Intrinsic.String.Concat(V.Local.sText,V.Ambient.NewLine,V.Screen.F_Etching!txtNotes.Text,V.Local.sText)
+
+F.Intrinsic.Printer.Position(450,400)
+F.Intrinsic.Printer.SetFont("Arial",12)
+'F.Intrinsic.Printer.PrintRet(V.Local.sText)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!txtDiameter.Text)
+f.Intrinsic.Printer.Position(450,+200)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!drpTemplate.Text)
+f.Intrinsic.Printer.Position(450,+200)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!txtDescr1.Text)
+f.Intrinsic.Printer.Position(450,+200)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!txtDescr2.Text)
+f.Intrinsic.Printer.Position(450,+200)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!txtDescr3.Text)
+f.Intrinsic.Printer.Position(450,+200)
+F.Intrinsic.Printer.PrintRet(V.Screen.F_Etching!txtNotes.Text)
+F.Intrinsic.Printer.Finished
+
+F.Intrinsic.Control.CallSub(Printlinkeddocs)
+
+V.Global.bBusy.Set(False)
+Gui.F_Etching.cmdPrint.Enabled(True)
+Gui.F_Etching..Enabled(True)
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Concat("Error occured ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.EndIf
+
+	V.Global.bBusy.Set(False)
+	Gui.F_Etching.cmdPrint.Enabled(True)
+	Gui.F_Etching..Enabled(True)
+
+
+
+program.sub.cmdprint_click.end
+
+Program.Sub.GetMode.Start
+F.Intrinsic.Control.SelectCase(V.Global.sMode)
+F.Intrinsic.Control.Case("F")
+	Gui.F_Etching.cmdExport.Visible(False)
+	Gui.F_Etching.cmdExport.Enabled(False)
+	Gui.F_Etching.cmdPart.Enabled(false)
+	Gui.F_Etching.cmdPart.Visible(False)
+	Gui.F_Etching.cmdPrint.Position(1000,1100)
+F.Intrinsic.Control.Case("V")
+	Gui.F_Etching.cmdExport.Visible(False)
+	Gui.F_Etching.cmdExport.Enabled(False)
+	Gui.F_Etching.cmdPart.Enabled(false)
+	Gui.F_Etching.cmdPart.Visible(False)
+	Gui.F_Etching.cmdSave.Enabled(False)
+	Gui.F_Etching.cmdSave.Visible(false)
+	Gui.F_Etching.txtDiameter.Enabled(False)
+	Gui.F_Etching.drpTemplate.Enabled(False)
+	Gui.F_Etching.txtDescr1.Enabled(False)
+	Gui.F_Etching.txtDescr2.Enabled(False)
+	Gui.F_Etching.txtDescr3.Enabled(False)
+	Gui.F_Etching.txtNotes.Enabled(False)
+	Gui.F_Etching.cmdPrint.Position(0,1100)
+	Gui.F_Etching.cmdPart.Visible(False)
+	Gui.F_Etching.cmdPart.Enabled(False)
+F.Intrinsic.Control.Case("T")
+	Gui.F_Etching.cmdSave.Enabled(False)
+	Gui.F_Etching.cmdSave.Visible(false)
+	Gui.F_Etching.txtDiameter.Enabled(False)
+	Gui.F_Etching.drpTemplate.Enabled(False)
+	Gui.F_Etching.txtDescr1.Enabled(False)
+	Gui.F_Etching.txtDescr2.Enabled(False)
+	Gui.F_Etching.txtDescr3.Enabled(False)
+	Gui.F_Etching.txtNotes.Enabled(False)
+	Gui.F_Etching.cmdExport.Position(0,1100)
+	Gui.F_Etching.cmdPrint.Position(1000,1100)
+	Gui.F_Etching.cmdPart.Visible(False)
+	Gui.F_Etching.cmdPart.Enabled(False)
+F.Intrinsic.Control.EndSelect
+
+Program.Sub.GetMode.End
+
+program.sub.cmdpart_click.start
+V.Local.sRet.Declare(String)
+V.Local.sPart.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+f.Intrinsic.UI.Browser(100,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	
+	F.Intrinsic.Control.CallSub("Clear")
+
+	Gui.F_Etching.txtPart.Text(V.Local.sRet(0))
+	Gui.F_Etching.txtRev.Text(V.Local.sRet(1))
+	Gui.F_Etching.txtLoc.Text(V.Local.sRet(2))
+
+	F.Intrinsic.Control.CallSub("Populate")
+F.Intrinsic.Control.EndIf
+
+program.sub.cmdpart_click.end
+
+Program.Sub.Populate.Start
+V.Local.sQuery.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sPart.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.iListItem.Declare(Long)
+
+F.Intrinsic.Control.If(V.Screen.F_Etching!txtPart.Text,<>,"")
+	F.Intrinsic.String.GSSPartString(V.Screen.F_Etching!txtPart.Text,V.Screen.F_Etching!txtRev.Text,V.Local.sPart)
+	F.Intrinsic.String.Concat("SELECT * FROM ATG_3185_ETCHING WHERE PART='",V.Local.sPart,"' AND LOC='",V.Screen.F_Etching!txtLoc.Text,"'",V.Local.sQuery)
+	F.ODBC.connection!conx.OpenRecordsetRW("rstEtch",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstEtch.EOF,<>,True)
+		F.Intrinsic.Variable.UDTSeek(V.uGlobal.uTemplates!ID,V.ODBC.conx!rstEtch.FieldVal!TEMPLATE_ID,4,V.Local.iOrd)
+		F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.local.iOrd)!ID,=,V.ODBC.conx!rstEtch.FieldVal!TEMPLATE_ID)
+'			F.Intrinsic.Control.CallSub("GetiOrdFromKey","key",V.ODBC.conx!rstEtch.FieldVal!TEMPLATE_ID)
+			Gui.F_Etching.drpTemplate.ListIndex(V.Local.iOrd)
+		F.Intrinsic.Control.EndIf
+		Gui.F_Etching.txtDiameter.Text(V.ODBC.conx!rstEtch.FieldValTrim!TOOL_DIAMETER)
+		Gui.F_Etching.txtDescr1.Text(V.ODBC.conx!rstEtch.FieldValTrim!DESCR_1)
+		Gui.F_Etching.txtDescr2.Text(V.ODBC.conx!rstEtch.FieldValTrim!DESCR_2)
+		Gui.F_Etching.txtDescr3.Text(V.ODBC.conx!rstEtch.FieldValTrim!DESCR_3)
+		Gui.F_Etching.txtNotes.Text(V.ODBC.conx!rstEtch.FieldValTrim!NOTES)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstEtch.Close
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Populate.End
+
+Program.Sub.GetExportPath.Start
+V.Local.sQuery.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+V.Global.sExportPath.Set("")
+F.ODBC.Connection!conx.OpenRecordsetRO("rstExport","SELECT * FROM ATG_3185_EXPORT_LOC")
+F.Intrinsic.Control.If(V.ODBC.conx!rstExport.EOF,<>,True)
+	F.Intrinsic.File.DirExists(V.ODBC.conx!rstExport.FieldValTrim!FILE_LOC,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		V.Global.sExportPath.Set(V.ODBC.conx!rstExport.FieldValTrim!FILE_LOC)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstExport.Close
+
+Program.Sub.GetExportPath.End
+
+program.sub.drptemplate_click.start
+V.Local.iOrd.Declare(Long)
+
+Gui.F_Etching..Enabled(False)
+
+F.Intrinsic.Variable.UDTSeek(V.uGlobal.uTemplates!ID,V.Screen.F_Etching!drpTemplate.ItemData,4,V.Local.iOrd)
+F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.Local.iOrd)!ID,=,V.Screen.F_Etching!drpTemplate.ItemData)
+	F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.Local.iOrd)!Descr1,=,True)
+		Gui.F_Etching.frmDescr1.Visible(True)
+		F.Intrinsic.Control.If(V.Global.sMode,=,"F")
+			Gui.F_Etching.txtDescr1.Enabled(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		Gui.F_Etching.frmDescr1.Visible(False)
+		Gui.F_Etching.txtDescr1.Enabled(False)
+		Gui.F_Etching.txtDescr1.Text("")
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.Local.iOrd)!Descr2,=,True)
+		Gui.F_Etching.frmDescr2.Visible(True)
+		F.Intrinsic.Control.If(V.Global.sMode,=,"F")
+			Gui.F_Etching.txtDescr2.Enabled(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		Gui.F_Etching.frmDescr2.Visible(False)
+		Gui.F_Etching.txtDescr2.Enabled(False)
+		Gui.F_Etching.txtDescr2.Text("")
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.uGlobal.uTemplates(v.Local.iOrd)!Descr3,=,True)
+		Gui.F_Etching.frmDescr3.Visible(True)
+		F.Intrinsic.Control.If(V.Global.sMode,=,"F")
+			Gui.F_Etching.txtDescr3.Enabled(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		Gui.F_Etching.frmDescr3.Visible(False)
+		Gui.F_Etching.txtDescr3.Enabled(False)
+		Gui.F_Etching.txtDescr3.Text("")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+Gui.F_Etching..Enabled(True)
+
+program.sub.drptemplate_click.end
+
+Program.Sub.PopulateTemplates.Start
+V.Local.iC.Declare(Long)
+
+F.ODBC.Connection!conx.OpenRecordsetRO("rstTemplates","SELECT * FROM ATG_3185_TEMPLATES ORDER BY DISPLAY ASC")
+F.Intrinsic.Control.If(V.ODBC.conx!rstTemplates.EOF,<>,True)
+	f.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstTemplates","v.uGlobal.uTemplates",False)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uTemplates.UBound,1)
+		Gui.F_Etching.drpTemplate.AddItem(V.uGlobal.uTemplates(v.Local.iC)!Display,V.uGlobal.uTemplates(v.Local.iC)!ID)
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstTemplates.Close
+
+Program.Sub.PopulateTemplates.End
+
+Program.Sub.GetiOrdFromKey.Start
+V.Local.iOrd.Declare(Long)
+V.Local.iUB.Declare(Long)
+
+'F.Intrinsic.Math.Add(V.Screen.F_Etching!drpTemplate.ListCount,-1,V.Local.iUB)
+'F.Intrinsic.Control.For(V.Local.iOrd,0,V.Local.iUB,1)
+	F.intrinsic.ui.msgbox(V.Screen.F_Etching!drpTemplate.ItemData(1))
+'F.Intrinsic.Control.Next(V.Local.iOrd)
+'V.Local.iOrd.Set(-1)
+
+
+Program.Sub.GetiOrdFromKey.End
+
+Program.Sub.Clear.Start
+Gui.F_Etching.txtPart.Text("")
+Gui.F_Etching.txtRev.Text("")
+Gui.F_Etching.txtLoc.Text("")
+Gui.F_Etching.txtDiameter.Text("")
+Gui.F_Etching.drpTemplate.Text("")
+Gui.F_Etching.txtDescr1.Text("")
+Gui.F_Etching.txtDescr2.Text("")
+Gui.F_Etching.txtDescr3.Text("")
+Gui.F_Etching.txtNotes.Text("")
+
+'make all frames visible
+
+Program.Sub.Clear.End
+
+program.sub.cmdlink_click.start
+V.Local.shold.Declare(String)
+V.Local.sWF.Declare(String)
+V.Local.sScript.Declare(String)
+V.Local.sPart.Declare(String)
+
+V.Local.sLine.Declare(String)
+F.Intrinsic.Control.If(V.Screen.F_Etching!txtPart.Text,<>,"")
+
+	F.Global.General.ResetPassedDataElements
+
+	F.Global.General.SetPassedDataElement("DATA-LINK-TYPE","800")
+	F.Intrinsic.String.GSSPartString(V.Screen.F_Etching!txtPart.Text,V.Screen.F_Etching!txtRev.Text,V.Local.sPart)
+	F.Intrinsic.String.Concat(V.Local.sPart,V.Screen.F_Etching!txtLoc.Text,V.Local.sPart)
+	F.Global.General.SetPassedDataElement("DATA-LINK-KEY",V.Local.sPart)
+
+	F.Global.General.SetPassedDataElement("DATA-LINK-DESC",V.Local.sPart)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstHook","SELECT SYNC_FLAG, SCRIPT_PATH, SCRIPT_NAME FROM HOOK_ASSOCIATION WHERE ACTIVE_FLAG = 'A' AND ID = '000016120'")
+	F.Intrinsic.Control.If(V.ODBC.conx!rstHook.EOF,=,False)
+
+		F.Intrinsic.Control.If(V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_PATH,=,"#SCRIPT-PATH#")
+			F.Intrinsic.string.Concat(V.caller.PluginsDir,"\GAB\GAS\",V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_NAME,V.Local.sScript)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Right(V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_PATH,1,V.Local.shold)
+			F.Intrinsic.Control.If(V.Local.shold,<>,"\")
+				F.Intrinsic.string.Concat(V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_PATH,"\",V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_NAME,V.Local.sScript)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.string.Concat(V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_PATH,V.ODBC.conx!rstHook.FieldValTrim!SCRIPT_NAME,V.Local.sScript)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.ODBC.conx!rstHook.FieldValTrim!SYNC_FLAG,=,"S")
+			F.Global.General.CallsyncGAS(V.Local.sScript)
+		F.Intrinsic.Control.Else
+			F.Global.General.CallAsyncGAS(V.Local.sScript)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Hook 000016120 not active. Unable to launch links.")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstHook.Close
+F.Intrinsic.Control.endif
+
+program.sub.cmdlink_click.end
+
+Program.Sub.PrintLinkedDocs.Start
+V.Local.sQuery.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sID.Declare(Long)
+V.Local.sPart.Declare(String)
+
+F.Intrinsic.String.GSSPartString(V.Screen.F_Etching!txtPart.Text,V.Screen.F_Etching!txtRev.Text,V.Local.sPart)
+F.Intrinsic.String.Concat(V.Local.sPart,V.Screen.F_Etching!txtLoc.Text,V.Local.sPart)
+F.Global.DocumentControl.CreateReference(V.Local.sPart,"800",V.Local.sID)
+
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.local.sID," ORDER BY FILE_TYPE",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.dountil(V.odbc.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Right(V.odbc.conX!rst.FieldValtrim!PATH,1,V.Local.shold)
+	F.Intrinsic.Control.If(V.Local.shold,=,"\")
+		F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValtrim!PATH,V.odbc.conX!rst.FieldValtrim!FILE,V.Local.shold)
+	F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+		F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValtrim!PATH,"\",V.odbc.conX!rst.FieldValtrim!FILE,V.Local.shold)
+	F.Intrinsic.Control.endif
+	F.Intrinsic.task.ShellExec(V.Caller.Handle,"PRINT",V.local.shold,"","",5)
+	F.odbc.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+F.ODBC.conX!rst.Close
+
+
+Program.Sub.PrintLinkedDocs.End
+
+
+
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
